@@ -9,14 +9,14 @@ script:
   - docker run jayce/react-test npm test -- --coverage
  
 after_success:
-  - docker build -t jayce/multi-client ./client  
-  - docker build -t jayce/multi-nginx ./nginx  
-  - docker build -t jayce/multi-server ./server  
-  - docker build -t jayce/multi-worker ./worker  
+  - docker build -t jayceayres/multi-client ./client  
+  - docker build -t jayceayres/multi-nginx ./nginx  
+  - docker build -t jayceayres/multi-server ./server  
+  - docker build -t jayceayres/multi-worker ./worker  
   #
   - echo "$DOCKER_PSW" | docker login -u "$DOCKER_ID" --password-stdin
   
-  - docker push jayce/multi-client
-  - docker push jayce/multi-nginx 
-  - docker push jayce/multi-server 
-  - docker push jayce/multi-worker 
+  - docker push jayceayres/multi-client
+  - docker push jayceayres/multi-nginx 
+  - docker push jayceayres/multi-server 
+  - docker push jayceayres/multi-worker 
