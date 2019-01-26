@@ -16,7 +16,7 @@ after_success:
   #
   - echo "$DOCKER_PSW" | docker login -u "$DOCKER_ID" --password-stdin
   
-  - docker push -t jayce/multi-client ./client  
-  - docker push -t jayce/multi-nginx ./nginx  
-  - docker push -t jayce/multi-server ./server  
-  - docker push -t jayce/multi-worker ./worker  
+  - docker push jayce/multi-client
+  - docker push jayce/multi-nginx 
+  - docker push jayce/multi-server 
+  - docker push jayce/multi-worker 
