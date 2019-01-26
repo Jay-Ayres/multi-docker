@@ -13,7 +13,7 @@ after_success:
   - docker build -t jayceayres/multi-nginx ./nginx  
   - docker build -t jayceayres/multi-server ./server  
   - docker build -t jayceayres/multi-worker ./worker  
-  #
+  ##
   - echo "$DOCKER_PSW" | docker login -u "$DOCKER_ID" --password-stdin
   
   - docker push jayceayres/multi-client
